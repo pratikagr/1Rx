@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myrx/screens/onboarding_one.dart'
+import 'package:myrx/screens/onboarding_one.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'MyRx',
-      home: onboarding_one(context)
+      home: onboarding_one()
           
-    )}
+    );}
 }
