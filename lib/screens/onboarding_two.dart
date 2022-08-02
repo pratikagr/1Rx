@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myrx/widgets/ElevatedButton.dart';
-import 'package:myrx/widgets/TextButton.dart';
 
-class onboarding_one extends StatelessWidget {
-  const onboarding_one({Key? key}) : super(key: key);
+class onboarding_two extends StatelessWidget {
+  const onboarding_two({Key? key}) : super(key: key);
 
   // This widget is the root of your application.
   @override
@@ -23,7 +21,13 @@ class onboarding_one extends StatelessWidget {
               Card(
                 color: Colors.black,
               ),
-              TexButton(buttonText: 'Next')
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(fontSize: 20),
+                ),
+                onPressed: () {},
+                child: const Text('Skip'),
+              ),
             ],
           ),
 
@@ -51,8 +55,18 @@ class onboarding_one extends StatelessWidget {
           )),
 
           //Button
-          EleButton(buttonText: 'Next', ),
-    
+          ElevatedButton(
+            child: Text('Next'),
+            style: ElevatedButton.styleFrom(
+              fixedSize: Size(400, 55),
+              primary: Colors.green,
+              textStyle: const TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontStyle: FontStyle.normal),
+            ),
+            onPressed: () {},
+          ),
         ],
       )),
     );
