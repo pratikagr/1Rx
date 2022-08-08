@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:myrx/widgets/route_button.dart';
 
-class onboarding_two extends StatelessWidget {
+class onboarding_two extends StatefulWidget {
   const onboarding_two({Key? key}) : super(key: key);
 
+  @override
+  State<onboarding_two> createState() => _onboarding_twoState();
+}
+
+class _onboarding_twoState extends State<onboarding_two> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MyRx',
-      home: Scaffold(
+    return Scaffold(
           body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -35,10 +39,7 @@ class onboarding_two extends StatelessWidget {
         Container(
           height: 300,
           width: 400,
-          child: Text('hello'),
-        decoration: BoxDecoration(
-          color: Color.fromRGBO(255, 0, 0, 100)
-          ),
+        child: Image.asset('assets/images/doctor.jpg'),
 ),
           //text
           Container(
@@ -55,20 +56,11 @@ class onboarding_two extends StatelessWidget {
           )),
 
           //Button
-          ElevatedButton(
-            child: Text('Next'),
-            style: ElevatedButton.styleFrom(
-              fixedSize: Size(400, 55),
-              primary: Colors.green,
-              textStyle: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 18,
-                  fontStyle: FontStyle.normal),
-            ),
-            onPressed: () {},
-          ),
-        ],
-      )),
-    );
+          routeButton(buttonText: 'Next', route: '/onboardingthree')
+        ]
+      )
+      
+      );
+    
   }
 }

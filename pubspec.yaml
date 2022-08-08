@@ -29,7 +29,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
+  webview_flutter: 3.0.4
+  flutter_colorpicker: ^1.0.3
+  otp_text_field: 1.1.3
+  flutter_verification_code: ^1.1.3+1
+  google_fonts: ^2.2.0
+  smooth_page_indicator: 1.0.0+2
+  curved_navigation_bar: 1.0.3
+  image_picker: 0.8.5+3
+  image_cropper: ^2.0.3
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -52,16 +60,22 @@ dev_dependencies:
 # The following section is specific to Flutter packages.
 flutter:
 
-  # The following line ensures that the Material Icons font is
+  # The following lin.0e ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/youtube.png
-    - assets/back.png
-    - assets/Share.png
+    - assets/images/youtube.png
+    - assets/images/doctor.jpg
+    - assets/images/logout.png
+    - assets/images/edit.png
+    - assets/images/cancel.png
+    - assets/images/back.png
+    - assets/images/done.png
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

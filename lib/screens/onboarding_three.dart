@@ -6,9 +6,7 @@ class onboarding_three extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MyRx',
-      home: Scaffold(
+    return  Scaffold(
           body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -38,8 +36,7 @@ class onboarding_three extends StatelessWidget {
           Container(
             height: 350,
             width: 400,
-            child: Text('hello'),
-            decoration: BoxDecoration(color: Color.fromRGBO(255, 0, 0, 100)),
+           child: Image.asset('assets/images/doctor.jpg'),
           ),
           //text
           Container(
@@ -65,13 +62,15 @@ class onboarding_three extends StatelessWidget {
               child: Text('Signin'),
               style: ElevatedButton.styleFrom(
                 fixedSize: Size(190, 55),
-                primary: Colors.green,
+                primary:Theme.of(context).primaryColor,
                 textStyle: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontStyle: FontStyle.normal),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context,'/login');
+              },
             ),
             SizedBox(
               width: 16,
@@ -86,15 +85,16 @@ class onboarding_three extends StatelessWidget {
                   color: Colors.black,
                   fontSize: 18,
                 ),
-                primary: Colors.teal,
+                primary:Theme.of(context).primaryColor,
               ),
               onPressed: () {
                 // print('Pressed');
+                  Navigator.pushNamed(context,'/signup');
               },
             )
           ]),
         ],
-      )),
-    );
+      ));
+    
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:myrx/widgets/ElevatedButton.dart';
-import 'package:myrx/widgets/TextButton.dart';
+import 'package:myrx/widgets/elevated_button.dart';
+import 'package:myrx/widgets/route_button.dart';
+import 'package:myrx/widgets/text_button.dart';
 
 class onboarding_one extends StatelessWidget {
   const onboarding_one({Key? key}) : super(key: key);
@@ -8,9 +9,7 @@ class onboarding_one extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'MyRx',
-      home: Scaffold(
+    return Scaffold(
           body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -23,7 +22,7 @@ class onboarding_one extends StatelessWidget {
               Card(
                 color: Colors.black,
               ),
-              TexButton(buttonText: 'Next')
+              TexButton(buttonText: 'Skip')
             ],
           ),
 
@@ -31,10 +30,8 @@ class onboarding_one extends StatelessWidget {
         Container(
           height: 300,
           width: 400,
-          child: Text('hello'),
-        decoration: BoxDecoration(
-          color: Color.fromRGBO(255, 0, 0, 100)
-          ),
+          child: Image.asset('assets/images/doctor.jpg'),
+     
 ),
           //text
           Container(
@@ -51,10 +48,10 @@ class onboarding_one extends StatelessWidget {
           )),
 
           //Button
-          EleButton(buttonText: 'Next', ),
+        routeButton(buttonText: 'Next', route: '/onboardingtwo')
     
         ],
-      )),
-    );
+      ));
+    
   }
 }
