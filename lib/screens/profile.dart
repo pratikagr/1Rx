@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:myrx/models/edit.dart';
 import 'package:myrx/widgets/social_card.dart';
 import 'package:myrx/widgets/choose_font.dart';
 import 'package:myrx/widgets/color_theme.dart';
@@ -72,7 +73,7 @@ String descText = '';
                   child: Column(
                     children: [
                       Text(
-                  'name',
+              'name' + editParams.name,
                         style: TextStyle(
                             fontSize: 28, fontWeight: FontWeight.w500),
                       ),
@@ -80,7 +81,7 @@ String descText = '';
                         height: 2,
                       ),
                       Text(
-                        'desc',
+                       'desc' + editParams.description,
                         style: TextStyle(
                             fontSize: 22, fontWeight: FontWeight.w300),
                       )

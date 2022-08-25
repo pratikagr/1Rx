@@ -4,6 +4,7 @@ import 'package:myrx/screens/home.dart';
 import 'package:myrx/screens/login.dart';
 import 'package:myrx/screens/login_with_otp.dart';
 import 'package:myrx/screens/onboarding_two.dart';
+import 'package:myrx/screens/onboardings_screen.dart';
 // import 'package:myrx/screens/otp_details.dart';
 import 'package:myrx/screens/otp_verification.dart';
 // import 'package:myrx/screens/otp_verify.dart';
@@ -51,7 +52,7 @@ class MyApp extends StatelessWidget {
       // home: onboarding_one(),
         initialRoute: '/',
           routes: {
-            '/' :(context) => onboarding_one(),
+            '/' :(context) => onboardingScreen(),
             '/onboardingtwo':(context) => onboarding_two(),
             '/onboardingthree':(context) => onboarding_three(),
             '/signup':(context) => details(),
